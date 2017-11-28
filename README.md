@@ -6,6 +6,7 @@
 * selected messages can be marked as read or unread
 * "unread messages counter" accurately displays the number of messages marked as unread
 * message background changes when selected or read or unread
+* all toolbar buttons are disabled when no messages are selected.
 
 ## Future versions will include
 * add and delete labels
