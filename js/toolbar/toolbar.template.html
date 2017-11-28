@@ -22,31 +22,73 @@
       </button>
   <!-- / select all button -->
 
-      <button class="btn btn-default" disabled="disabled">
+  <!-- mark as read -->
+    <!-- none Selected -->
+      <button ng-if="(ctrl.selected($ctrl.mail) == 0)" class="btn btn-default" disabled="disabled">
         Mark As Read
       </button>
+    <!-- any Selected -->
+      <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default">
+        Mark As Read
+      </button>
+  <!-- / mark as read -->
 
-      <button class="btn btn-default" disabled="disabled">
+  <!-- mark as unread -->
+    <!-- none Selected -->
+      <button ng-if="(ctrl.selected($ctrl.mail) == 0)" class="btn btn-default" disabled="disabled">
         Mark As Unread
       </button>
+    <!-- any Selected -->
+      <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default">
+        Mark As Unread
+      </button>
+  <!-- / mark as unread -->
 
-      <select class="form-control label-select" disabled="disabled">
+  <!-- apply lable -->
+    <!-- none Selected -->
+      <select ng-if="(ctrl.selected($ctrl.mail) == 0)" class="form-control label-select" disabled="disabled">
         <option>Apply label</option>
         <option value="dev">dev</option>
         <option value="personal">personal</option>
         <option value="gschool">gschool</option>
       </select>
+    <!-- any Selected -->
+      <select ng-if="(ctrl.selected($ctrl.mail) != 0)" class="form-control label-select">
+        <option>Apply label</option>
+        <option value="dev">dev</option>
+        <option value="personal">personal</option>
+        <option value="gschool">gschool</option>
+      </select>
+  <!-- / apply lable -->
 
-      <select class="form-control label-select" disabled="disabled">
+  <!-- remove lable -->
+    <!-- none Selected -->
+      <select ng-if="(ctrl.selected($ctrl.mail) == 0)" class="form-control label-select" disabled="disabled">
         <option>Remove label</option>
         <option value="dev">dev</option>
         <option value="personal">personal</option>
         <option value="gschool">gschool</option>
       </select>
+    <!-- any Selected -->
+      <select ng-if="(ctrl.selected($ctrl.mail) != 0)" class="form-control label-select">
+        <option>Remove label</option>
+        <option value="dev">dev</option>
+        <option value="personal">personal</option>
+        <option value="gschool">gschool</option>
+      </select>
+  <!-- / remove lable -->
 
-      <button class="btn btn-default" disabled="disabled">
+  <!-- trash -->
+    <!-- none Selected -->
+      <button ng-if="(ctrl.selected($ctrl.mail) == 0)" class="btn btn-default" disabled="disabled">
         <i class="fa fa-trash-o"></i>
       </button>
+    <!-- any Selected -->
+      <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default">
+        <i class="fa fa-trash-o"></i>
+      </button>
+  <!-- / trash -->
+
     </div>
   </div>
 

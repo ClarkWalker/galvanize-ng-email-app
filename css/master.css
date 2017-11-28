@@ -26,7 +26,11 @@
   font-weight: bold;
 }
 
-.message.selected {
+/*.message.selected {
+  background: #ffffcc;
+}*/
+
+.message.selected-true {
   background: #ffffcc;
 }
 
