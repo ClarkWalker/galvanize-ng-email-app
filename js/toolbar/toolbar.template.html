@@ -1,5 +1,4 @@
 <div ng-controller="toolbar as ctrl">
-
   <div class="row toolbar">
     <div class="col-md-12">
       <p class="pull-right">
@@ -7,89 +6,89 @@
         unread messages
       </p>
 
-  <!-- select all button -->
-    <!-- none Selected -->
-      <button ng-if="(ctrl.selected($ctrl.mail) == 0)" class="btn btn-default" ng-click="ctrl.test($ctrl.toolbar)">
+      <!-- select all button -->
+      <!-- none Selected -->
+      <button ng-if="(ctrl.selected($ctrl.mail) == 0)" class="btn btn-default" ng-click="ctrl.selectAll($ctrl.mail)">
         <i class="fa fa-square-o"></i>
       </button>
-    <!-- some selected -->
-      <button ng-if="(ctrl.selected($ctrl.mail) > 0) && (ctrl.selected($ctrl.mail) < $ctrl.mail.length)" class="btn btn-default" ng-click="ctrl.test($ctrl.toolbar)">
+      <!-- some selected -->
+      <button ng-if="(ctrl.selected($ctrl.mail) > 0) && (ctrl.selected($ctrl.mail) < $ctrl.mail.length)" class="btn btn-default" ng-click="ctrl.deSelectAll($ctrl.mail)">
         <i class="fa fa-minus-square-o"></i>
       </button>
-    <!-- all selected -->
-      <button ng-if="(ctrl.selected($ctrl.mail) == $ctrl.mail.length)" class="btn btn-default" ng-click="ctrl.test($ctrl.toolbar)">
+      <!-- all selected -->
+      <button ng-if="(ctrl.selected($ctrl.mail) == $ctrl.mail.length)" class="btn btn-default" ng-click="ctrl.deSelectAll($ctrl.mail)">
         <i class="fa fa-check-square-o"></i>
       </button>
-  <!-- / select all button -->
+      <!-- / select all button -->
 
-  <!-- mark as read -->
-    <!-- none Selected -->
+      <!-- mark as read -->
+      <!-- none Selected -->
       <button ng-if="(ctrl.selected($ctrl.mail) == 0)" class="btn btn-default" disabled="disabled">
         Mark As Read
       </button>
-    <!-- any Selected -->
+      <!-- any Selected -->
       <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default">
         Mark As Read
       </button>
-  <!-- / mark as read -->
+      <!-- / mark as read -->
 
-  <!-- mark as unread -->
-    <!-- none Selected -->
+      <!-- mark as unread -->
+      <!-- none Selected -->
       <button ng-if="(ctrl.selected($ctrl.mail) == 0)" class="btn btn-default" disabled="disabled">
         Mark As Unread
       </button>
-    <!-- any Selected -->
+      <!-- any Selected -->
       <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default">
         Mark As Unread
       </button>
-  <!-- / mark as unread -->
+      <!-- / mark as unread -->
 
-  <!-- apply lable -->
-    <!-- none Selected -->
+      <!-- apply lable -->
+      <!-- none Selected -->
       <select ng-if="(ctrl.selected($ctrl.mail) == 0)" class="form-control label-select" disabled="disabled">
         <option>Apply label</option>
         <option value="dev">dev</option>
         <option value="personal">personal</option>
         <option value="gschool">gschool</option>
       </select>
-    <!-- any Selected -->
+      <!-- any Selected -->
       <select ng-if="(ctrl.selected($ctrl.mail) != 0)" class="form-control label-select">
         <option>Apply label</option>
         <option value="dev">dev</option>
         <option value="personal">personal</option>
         <option value="gschool">gschool</option>
       </select>
-  <!-- / apply lable -->
+      <!-- / apply lable -->
 
-  <!-- remove lable -->
-    <!-- none Selected -->
+      <!-- remove lable -->
+      <!-- none Selected -->
       <select ng-if="(ctrl.selected($ctrl.mail) == 0)" class="form-control label-select" disabled="disabled">
         <option>Remove label</option>
         <option value="dev">dev</option>
         <option value="personal">personal</option>
         <option value="gschool">gschool</option>
       </select>
-    <!-- any Selected -->
+      <!-- any Selected -->
       <select ng-if="(ctrl.selected($ctrl.mail) != 0)" class="form-control label-select">
         <option>Remove label</option>
         <option value="dev">dev</option>
         <option value="personal">personal</option>
         <option value="gschool">gschool</option>
       </select>
-  <!-- / remove lable -->
+      <!-- / remove lable -->
 
-  <!-- trash -->
-    <!-- none Selected -->
+      <!-- trash -->
+      <!-- none Selected -->
       <button ng-if="(ctrl.selected($ctrl.mail) == 0)" class="btn btn-default" disabled="disabled">
         <i class="fa fa-trash-o"></i>
       </button>
-    <!-- any Selected -->
+      <!-- any Selected -->
       <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default">
         <i class="fa fa-trash-o"></i>
       </button>
-  <!-- / trash -->
-
+      <!-- / trash -->
     </div>
   </div>
+
 
 </div>
