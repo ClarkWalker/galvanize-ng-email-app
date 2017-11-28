@@ -65,6 +65,17 @@ function toolbarfun() {
     }
   };
 
+  // what is unread
+  this.unReadCount = function(mail) {
+    let counter = 0;
+    for (var i = 0; i < mail.length; i++) {
+      if (mail[i].read == false) {
+        counter++;
+      }
+    }
+    return counter;
+  };
+
   this.allLabels = [
     {
       "id": 1,
