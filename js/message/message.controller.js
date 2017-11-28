@@ -2,9 +2,9 @@ angular.module('inboxApp')
 .controller('messages', messages);
 
 function messages() {
-  const vm = this;
+  // const vm = this;
 
-  vm.mail = [
+  this.mail = [
     {
       "id": 1,
       "subject": "You can't input the protocol without calculating the mobile RSS protocol!",

@@ -2,9 +2,9 @@ angular.module('inboxApp')
 .controller('toolbar', toolbarfun);
 
 function toolbarfun() {
-  const vm = this;
+  // const vm = this;
 
-  vm.test = function(mail) {
+  this.test = function(mail) {
     console.log(mail);
     for (var i = 0; i < mail.length; i++) {
       mail[i].selected = true;
@@ -12,7 +12,7 @@ function toolbarfun() {
   };
 
   // what is selected
-  vm.selected = function(mail) {
+  this.selected = function(mail) {
     let counter = 0;
     for (var i = 0; i < mail.length; i++) {
       if (mail[i].selected == true) {
@@ -23,7 +23,7 @@ function toolbarfun() {
   };
 
   // what is unselected
-  vm.unSelected = function(mail) {
+  this.unSelected = function(mail) {
     let counter = 0;
     for (var i = 0; i < mail.length; i++) {
       if (mail[i].selected == false) {
@@ -34,20 +34,38 @@ function toolbarfun() {
   };
 
   // select all
-  vm.selectAll = function(mail) {
+  this.selectAll = function(mail) {
     for (var i = 0; i < mail.length; i++) {
       mail[i].selected = true;
     }
   };
 
   // deselect all
-  vm.deSelectAll = function(mail) {
+  this.deSelectAll = function(mail) {
     for (var i = 0; i < mail.length; i++) {
       mail[i].selected = false;
     }
   };
 
-  vm.allLabels = [
+  // mark as read
+  this.isRead = function(mail) {
+    for (var i = 0; i < mail.length; i++) {
+      if (mail[i].selected == true) {
+        mail[i].read = true;
+      }
+    }
+  };
+
+  // mark as unread
+  this.isUnRead = function(mail) {
+    for (var i = 0; i < mail.length; i++) {
+      if (mail[i].selected == true) {
+        mail[i].read = false;
+      }
+    }
+  };
+
+  this.allLabels = [
     {
       "id": 1,
       "label": "dev"
@@ -62,7 +80,7 @@ function toolbarfun() {
     }
   ];
 
-  vm.frodo = function(selected) {
+  this.frodo = function(selected) {
     console.log(selected);
   }
 

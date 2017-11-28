@@ -12,7 +12,7 @@
         <i class="fa fa-square-o"></i>
       </button>
       <!-- some selected -->
-      <button ng-if="(ctrl.selected($ctrl.mail) > 0) && (ctrl.selected($ctrl.mail) < $ctrl.mail.length)" class="btn btn-default" ng-click="ctrl.deSelectAll($ctrl.mail)">
+      <button ng-if="(ctrl.selected($ctrl.mail) > 0) && (ctrl.selected($ctrl.mail) < $ctrl.mail.length)" class="btn btn-default" ng-click="ctrl.selectAll($ctrl.mail)">
         <i class="fa fa-minus-square-o"></i>
       </button>
       <!-- all selected -->
@@ -27,7 +27,7 @@
         Mark As Read
       </button>
       <!-- any Selected -->
-      <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default">
+      <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default" ng-click="ctrl.isRead($ctrl.mail)">
         Mark As Read
       </button>
       <!-- / mark as read -->
@@ -38,7 +38,7 @@
         Mark As Unread
       </button>
       <!-- any Selected -->
-      <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default">
+      <button ng-if="(ctrl.selected($ctrl.mail) != 0)" class="btn btn-default" ng-click="ctrl.isUnRead($ctrl.mail)">
         Mark As Unread
       </button>
       <!-- / mark as unread -->

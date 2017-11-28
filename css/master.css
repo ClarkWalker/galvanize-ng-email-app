@@ -18,11 +18,11 @@
   border-top: 1px solid #efefef;
 }
 
-.message.read {
+.message.read-true {
   background: #efefef;
 }
 
-.message.unread {
+.message.read-false {
   font-weight: bold;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .message:hover {
-  margin-left: -3px;
+  margin-left: 3px;
   border-left: 3px solid #ccc;
 }
 
