@@ -1,10 +1,10 @@
 angular.module('inboxApp')
 .controller('messages', messages);
 
-function messages() {
+function messages($http) {
   // const vm = this;
 
-  this.mail = [
+  this.mail = [ // api call .messages
     {
       "id": 1,
       "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
