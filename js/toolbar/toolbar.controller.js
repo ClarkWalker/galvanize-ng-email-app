@@ -2,9 +2,9 @@ angular.module('inboxApp')
 .controller('toolbar', toolbarfun);
 
 function toolbarfun() {
-  // const vm = this;
+  const viewModel = this;
 
-  this.test = function(mail) {
+  viewModel.test = function(mail) {
     console.log(mail);
     for (var i = 0; i < mail.length; i++) {
       mail[i].selected = true;
@@ -12,7 +12,7 @@ function toolbarfun() {
   };
 
   // what is selected
-  this.selected = function(mail) {
+  viewModel.selected = function(mail) {
     let counter = 0;
     for (var i = 0; i < mail.length; i++) {
       if (mail[i].selected == true) {
@@ -23,7 +23,7 @@ function toolbarfun() {
   };
 
   // what is unselected
-  this.unSelected = function(mail) {
+  viewModel.unSelected = function(mail) {
     let counter = 0;
     for (var i = 0; i < mail.length; i++) {
       if (mail[i].selected == false) {
@@ -34,21 +34,21 @@ function toolbarfun() {
   };
 
   // select all
-  this.selectAll = function(mail) {
+  viewModel.selectAll = function(mail) {
     for (var i = 0; i < mail.length; i++) {
       mail[i].selected = true;
     }
   };
 
   // deselect all
-  this.deSelectAll = function(mail) {
+  viewModel.deSelectAll = function(mail) {
     for (var i = 0; i < mail.length; i++) {
       mail[i].selected = false;
     }
   };
 
   // mark as read
-  this.isRead = function(mail) {
+  viewModel.isRead = function(mail) {
     for (var i = 0; i < mail.length; i++) {
       if (mail[i].selected == true) {
         mail[i].read = true;
@@ -57,7 +57,7 @@ function toolbarfun() {
   };
 
   // mark as unread
-  this.isUnRead = function(mail) {
+  viewModel.isUnRead = function(mail) {
     for (var i = 0; i < mail.length; i++) {
       if (mail[i].selected == true) {
         mail[i].read = false;
@@ -66,7 +66,7 @@ function toolbarfun() {
   };
 
   // what is unread
-  this.unReadCount = function(mail) {
+  viewModel.unReadCount = function(mail) {
     let counter = 0;
     for (var i = 0; i < mail.length; i++) {
       if (mail[i].read == false) {
@@ -76,7 +76,7 @@ function toolbarfun() {
     return counter;
   };
 
-  this.allLabels = [
+  viewModel.allLabels = [
     {
       "id": 1,
       "label": "dev"
@@ -91,7 +91,7 @@ function toolbarfun() {
     }
   ];
 
-  this.frodo = function(selected) {
+  viewModel.frodo = function(selected) {
     console.log(selected);
   }
 
