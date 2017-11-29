@@ -9,6 +9,6 @@
 * all toolbar buttons are disabled when no messages are selected.
 
 ## Future versions will include
-* add and delete labels
+* add and remove labels
 * delete messages
 * compose new messages
